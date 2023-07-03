@@ -32,6 +32,4 @@ class Sorting:
                     list_[idx], list_[idx + 1] = list_[idx + 1], list_[idx]
             self.bubble_sort_recursive(list_, flag)
         return list_
-    
-    
 
