@@ -46,4 +46,3 @@ class Sorting:
                 list_[j] = next_item
                 j -= 1
         return list_
-
