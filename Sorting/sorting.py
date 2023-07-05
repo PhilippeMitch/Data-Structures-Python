@@ -16,7 +16,7 @@ class Sorting:
             for idx in range(pass_):
                 if list_[idx] > list_[idx + 1]:
                     list_[idx], list_[idx + 1] = list_[idx + 1], list_[idx]
-        return list
+        return list_
 
     def bubble_sort_recursive(self, list_, flag=False):
         """
