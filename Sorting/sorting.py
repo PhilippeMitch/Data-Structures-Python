@@ -33,3 +33,17 @@ class Sorting:
             self.bubble_sort_recursive(list_, flag)
         return list_
 
+    def insertion_sort(self, list_):
+        """
+        This function receive an unorderded list
+        and return an ordered list
+        """
+        for i in range(1, len(list_)):
+            j = i -1
+            next_item = list_[i]
+            while(list_[j+1] > next_item) and (j >= 0):
+                list_[j + 1] = list_[j]
+                list_[j] = next_item
+                j -= 1
+        return list_
+
