@@ -46,3 +46,44 @@ class Sorting:
                 list_[j] = next_item
                 j -= 1
         return list_
+
+    def merge_sort(self, list_):
+        """
+        This function receive an unorderded list
+        and return an ordered list
+        """
+
+        mid = len(list_) // 2
+        left_list = list_[:mid]
+        right_list = list_[mid:]
+
+        self.merge_sort(left_list)
+        self.merge_sort(right_list)
+
+        left_list_idx = 0
+        right_list_idx = 0
+        list_idx = 0
+
+        while left_list_idx < len(left_list) and right_list_idx < len(right_list):
+            if left_list[left_list_idx] < right_list[right_list_idx]:
+                list_[list_idx] = left_list[left_list_idx]
+                left_list_idx += 1
+                list_idx += 1
+            else:
+                list_[list_idx] = right_list[right_list_idx]
+                right_list_idx += 1
+                list_idx += 1
+
+        while left_list_idx < len(left_list):
+            list_[list_idx] = left_list[left_list_idx]
+            left_list_idx += 1
+            list_idx += 1
+
+        while right_list_idx < len(right_list):
+            list_[list_idx] = right_list[right_list_idx]
+            right_list_idx += 1
+            list_idx += 1
+
+        return list_
+
+        
