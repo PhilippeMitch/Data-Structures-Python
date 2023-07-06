@@ -39,12 +39,13 @@ class Sorting:
         and return an ordered list
         """
         for i in range(1, len(list_)):
-            j = i -1
-            next_item = list_[i]
-            while(list_[j+1] > next_item) and (j >= 0):
-                list_[j + 1] = list_[j]
-                list_[j] = next_item
-                j -= 1
+          j = i - 1
+          next_item = list_[i]
+          while (list_[j] > next_item) and (j >= 0):
+            list_[j + 1] = list_[j]
+            list_[j] = next_item
+            j = j - 1
+            
         return list_
 
     def merge_sort(self, list_):
@@ -56,9 +57,10 @@ class Sorting:
         mid = len(list_) // 2
         left_list = list_[:mid]
         right_list = list_[mid:]
-
-        self.merge_sort(left_list)
-        self.merge_sort(right_list)
+        
+        if len(list_) > 1:
+            self.merge_sort(left_list)
+            self.merge_sort(right_list)
 
         left_list_idx = 0
         right_list_idx = 0
