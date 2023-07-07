@@ -88,4 +88,21 @@ class Sorting:
 
         return list_
 
-        
+    def shell_sort(self, list_):
+        """
+        This function receive an unorderded list
+        and return an ordered list
+        """
+        sublist_length = len(list_) // 2
+        while sublist_length > 0:
+            for i in range(sublist_length, len(list_)):
+                temp = list_[i]
+                j = i
+                # Sort this sublist
+                while j >= sublist_length and list_[j - sublist_length] > temp:
+                    list_[j] = list_[j - sublist_length]
+                    j -= sublist_length
+                list_[j] = temp
+            # Reduce the sublist length for the next element
+            sublist_length //= 2
+        return list_
