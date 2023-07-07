@@ -25,5 +25,6 @@ As we can see the algorithm has the following three steps:
 2. It uses recursion to split until the length of each list is 1
 3. Then, it merges the sorted parts into a sorted list and returns it
 
-
+### Shell Sort
+Shell sort is not for big data. It is used for medium-sized datasets. In a best-case scenario the performance of the shell Sort algorithm is $O(N)$.
 
