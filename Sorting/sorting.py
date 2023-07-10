@@ -106,3 +106,16 @@ class Sorting:
             # Reduce the sublist length for the next element
             sublist_length //= 2
         return list_
+
+    def selection_sort(self, list_):
+        """
+        This function receive an unorderded list
+        and return an ordered list
+        """
+        for pass_ in range(len(list_)-1, 0, -1):
+            max_idx = 0
+            for idx in range(1, len(pass_)+1):
+                if list_[idx] > list_[max_idx]:
+                    max_idx = idx
+            list_[pass_], list_[max_idx] = list_[max_idx], list_[pass_]
+        return list_
