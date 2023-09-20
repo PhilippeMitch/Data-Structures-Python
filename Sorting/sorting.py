@@ -8,7 +8,7 @@ class Sorting:
     """
     def bubble_sort(self, list_):
         """
-        This function receive an unorderded list
+        This method receive an unorderded list
         and return an ordered list
         """
         tail_idx = len(list_) - 1
@@ -20,7 +20,7 @@ class Sorting:
 
     def bubble_sort_recursive(self, list_, flag=False):
         """
-        This function receive an unorderded list
+        This method receive an unorderded list
         and return an ordered list
         """
         tail_idx = len(list_) - 1
@@ -35,7 +35,7 @@ class Sorting:
 
     def insertion_sort(self, list_):
         """
-        This function receive an unorderded list
+        This method receive an unorderded list
         and return an ordered list
         """
         for i in range(1, len(list_)):
@@ -50,7 +50,7 @@ class Sorting:
 
     def merge_sort(self, list_):
         """
-        This function receive an unorderded list
+        This method receive an unorderded list
         and return an ordered list
         """
 
@@ -90,7 +90,7 @@ class Sorting:
 
     def shell_sort(self, list_):
         """
-        This function receive an unorderded list
+        This method receive an unorderded list
         and return an ordered list
         """
         sublist_length = len(list_) // 2
@@ -109,7 +109,7 @@ class Sorting:
 
     def selection_sort(self, list_):
         """
-        This function receive an unorderded list
+        This method receive an unorderded list
         and return an ordered list
         """
         for pass_ in range(len(list_)-1, 0, -1):
