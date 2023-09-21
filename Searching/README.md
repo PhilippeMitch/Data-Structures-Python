@@ -10,7 +10,7 @@ Here are some of the algorithms used for searching:
 
 ### Linear Search
 Linear search is a sequential searching algorithm where we start from one end and check every element of the list until the desired element is found. It is one of the simplest strategies for searching data is to simply loop through each element looking for the target.
-As discussed, linear search is a simple algorithm that performs an exhaustive search. Its worst-case behavior is O(N).
+As discussed, linear search is a simple algorithm that performs an exhaustive search. Its worst-case behavior is $O(N)$.
 
 ### Binary Search
 Binary Search is a searching algorithm for finding an element's position in a sorted array. The algorithm iteratively
