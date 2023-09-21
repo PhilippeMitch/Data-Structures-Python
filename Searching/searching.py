@@ -18,6 +18,10 @@ class Search:
         return f"{elem} is not found in the list"
 
     def binary_search(self, list_, elem):
+        """This method receive a list and an item to search, 
+            when the item is found, the results is returned 
+            and the algorithm exits the loop
+        """
         first = 0
         last = len(list_)-1
         found = False
