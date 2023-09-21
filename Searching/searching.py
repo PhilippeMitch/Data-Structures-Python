@@ -16,3 +16,19 @@ class Search:
             if item == elem:
                 return f"{elem} is found at position {list_.index(elem)}"
         return f"{elem} is not found in the list"
+
+    def binary_search(self, list_, elem):
+        first = 0
+        last = len(list_)-1
+        found = False
+        while first<=last and not found:
+            midpoint = (first + last)//2
+            if list_[midpoint] == elem:
+                found = True
+            else:
+                if elem < list_[midpoint]:
+                    last = midpoint-1
+                else:
+                    first = midpoint+1
+        return f"{elem} is found at position {list_.index(elem)}"
+
