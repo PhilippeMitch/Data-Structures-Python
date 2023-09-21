@@ -28,3 +28,7 @@ As we can see the algorithm has the following three steps:
 ### Shell Sort
 Shell sort is not for big data. It is used for medium-sized datasets. In a best-case scenario the performance of the shell Sort algorithm is $O(N)$.
 
+
+### Selection Sort
+Selection sort is an improvement on bubble sort, where we try to minimize the total number of swaps required with the algorithm. Selection sort's worst-case performance is $O(n^2)$. Note that its worst performance is similar to bubble sort and it should not be used for sorting larger datasets.
+
