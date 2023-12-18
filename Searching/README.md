@@ -17,3 +17,19 @@ Binary Search is a searching algorithm for finding an element's position in a so
 divides a list into two parts and keeps a track of the lowest and highest indices until it findsthe value it is looking for.
 
 Binary search is so named because at each iteration, the algorithm bifurcates the data into two parts. If the data has N items, it will take a maximum of $O(logN)$ steps to iterate.
+
+### Interpolation Search
+Interpolation search is a more sophisticated algorithm than *Binary Search*. It uses the target value to estimate the position
+of the element in the sorted array.
+
+```sh
+>>> from Searching import Search
+>>> search = Search()
+>>> list_ = [2, 3, 4, 10, 40, 22, 55, 99]
+>>> interRes = search.interpolation_search(list_, 0, len(list_) - 1, 55)
+>>> interRes
+'Elemen 55 found at position 6'
+```
+
+Time Complexity: $O(log2(log2 n))$ for the average case, and $O(n)$ for the worst case.
+
