@@ -36,3 +36,19 @@ class Search:
                     first = midpoint+1
         return f"{elem} is found at position {list_.index(elem)}"
 
+    def interpolation_search(self, list_, low, hight, elem):
+
+        if (low <= hight and elem >= list_[low] and elem <= list_[hight]):
+
+            position = low + ( (hight - low) // (list_[hight] - list_[low]) * (elem - list_[low]))
+
+            if list_[position] == elem:
+                return f"Elemen {elem} found at position {position}"
+
+            if list_[position] < elem:
+                return self.interpolation_search(list_, position + 1, hight, elem)
+
+            if list_[position] > elem:
+                return self.interpolation_search(list_, low, position + 1, elem)
+        
+        return f"Element {elem} not found"
